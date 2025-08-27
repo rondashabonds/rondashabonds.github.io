@@ -1,0 +1,126 @@
+/* General page styling */
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    margin: 0;
+    padding: 20px;
+    color: #222;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Wrapper for content */
+#content {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #ffffffcc;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* About section */
+#about {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #fff8e7;
+    border-left: 6px solid #ffb703;
+    border-radius: 8px;
+}
+
+/* Repo section */
+#repo {
+    margin: 40px 0;
+    padding: 20px;
+    text-align: center;
+    background: #edf6f9;
+    border-left: 6px solid #219ebc;
+    border-radius: 8px;
+}
+
+/* Assignments section */
+#assignments {
+    margin-top: 40px;
+    padding: 20px;
+    background: #fefae0;
+    border-left: 6px solid #2a9d8f;
+    border-radius: 8px;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    color: #3b1c8a;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px #ffda77;
+    transition: transform 0.3s;
+}
+h1:hover {
+    transform: scale(1.05);
+}
+
+h2.title {
+    color: #006d77;
+    margin-top: 30px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #006d77;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Paragraph */
+.description {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #333;
+    background: #fff8e7;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    animation: slideIn 1s ease-out;
+}
+
+/* Links */
+a {
+    color: #ff006e;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.2s;
+}
+a:hover {
+    color: #8338ec;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+/* Assignment List */
+#assignments ol {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 400px;
+}
+#assignments li {
+    background: #edf6f9;
+    margin: 10px 0;
+    padding: 12px 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s, background 0.3s;
+}
+#assignments li:hover {
+    transform: translateX(10px);
+    background: #cdeac0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
+}
