@@ -1,0 +1,104 @@
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: gold;
+  color: #333;
+}
+
+header {
+  background-color: #fef9e7;
+  padding: 1em;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0.5em 0;
+}
+
+/* Navigation */
+#main-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#main-nav li {
+  flex: 1;
+}
+
+#main-nav a {
+  display: block;
+  padding: 10px;
+  background: black;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+#main-nav a:hover {
+  background: purple;
+}
+
+/* Content Sections */
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 1em;
+}
+
+article, aside {
+  background: #ecf0f1;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+article img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 1em;
+}
+
+/* Flex ratios */
+.one { flex: 1; }
+.two { flex: 2; }
+.three { flex: 3; }
+.four { flex: 4; }
+
+/* Gallery */
+#gallery article {
+  text-align: center;
+}
+
+/* Sidebar */
+aside {
+  background: black;
+  color: white;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside li {
+  margin: 0.5em 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #eee;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .columns {
+    flex-direction: column;
+  }
+}
