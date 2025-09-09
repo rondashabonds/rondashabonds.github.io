@@ -9,5 +9,6 @@ const sayHello =() =>{
 */
 
 document.getElemnetId("btn-click-me").onclick =() => {
+    console.log("helloworld")
 
 };
