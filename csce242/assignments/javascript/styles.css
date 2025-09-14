@@ -1,0 +1,152 @@
+/* Starter grid/panel spacing adapted from our in-class grid template (commented per instructions). */
+/* Custom palette — feel free to tweak */
+:root{
+  --bg: #eef3ef;
+  --panel: #faf3dd;
+  --ink: #3e6b6d;     /* headings/body */
+  --accent: #e28995;  /* subtitle accent */
+  --border: #c7d2c9;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+/* Accessibility helper for visual-only labels */
+.visually-hidden{
+  position:absolute !important;
+  height:1px; width:1px;
+  overflow:hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+.page-header{
+  text-align:center;
+  padding: 28px 16px 10px;
+}
+.page-header h1{
+  margin:0 0 6px;
+  font-weight: 800;
+  letter-spacing:.4px;
+}
+.subtitle{
+  margin:0 0 18px;
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+/* 3-column desktop → 1-col mobile */
+.grid{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+}
+@media (max-width: 860px){
+  .grid{ grid-template-columns: 1fr; gap: 18px; }
+}
+
+.panel{
+  background: var(--panel);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  min-height: 230px;
+  padding: 18px 18px 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.04);
+}
+.panel h2{
+  margin: 4px 0 14px;
+  text-align: center;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+/* Sunny Times indented lines (match diagram) */
+.sunny-text p{ margin: 6px 0; }
+.indent1{ margin-left: 24px; }
+.indent2{ margin-left: 48px; }
+.indent3{ margin-left: 72px; }
+#sunnyCard{ cursor: pointer; }
+#sunnyCard:focus{ outline: 3px dashed var(--accent); outline-offset: 4px; }
+
+/* Color picker “column” alignment */
+.color-row{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  margin-left: 18px;
+  margin-bottom: 8px;
+}
+#colorPicker{
+  width: 54px;
+  height: 32px;
+  border: 1px solid #888;
+  border-radius: 6px;
+  padding:0;
+  background:#fff;
+}
+.color-para{
+  min-height: 20px; /* keeps an empty line under picker like the mock */
+  margin: 10px 18px 4px;
+}
+.color-code{
+  margin: 0 18px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+/* Image change area */
+.btn{
+  margin-left: 18px;
+  padding: 4px 10px;
+  border: 1px solid #7b8d8c;
+  background: #fff;
+  color: #2d5051;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn:hover{ filter: brightness(0.98); }
+.btn:disabled{ opacity:.6; cursor: default; }
+
+.img-wrap{
+  display: grid;
+  justify-content: start;
+  margin-top: 10px;
+  margin-left: 18px;
+}
+.img-wrap img{
+  width: 110px;
+  height: 110px;      /* square for seamless swap */
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+/* Footer */
+.footer{
+  text-align:center;
+  padding: 10px 0 26px;
+  color: #5e8687;
+}
+/* Make the whole column look/act clickable */
+.sunny-panel { cursor: pointer; }
+
+/* Force left alignment & precise indents */
+.sunny-text{
+  text-align: left;
+  --indent-step: 24px; /* tweak this to match your screenshot spacing */
+}
+.sunny-text p{ margin: 6px 0; }
+
+.indent-1 { padding-left: calc(var(--indent-step) * 1); }
+.indent-2 { padding-left: calc(var(--indent-step) * 2); }
+.indent-3 { padding-left: calc(var(--indent-step) * 3); }
