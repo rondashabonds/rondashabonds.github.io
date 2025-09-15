@@ -1,6 +1,6 @@
 "use strict";
 
-// Sunny Times: reveal aligned paragraphs on column click
+
 const sunnyPanel = document.getElementById("sunnyPanel");
 const sunnyText  = document.getElementById("sunnyText");
 
@@ -20,7 +20,7 @@ sunnyPanel.addEventListener("keydown", (e) => {
 });
 
 
-/* ===== Select a Color ===== */
+
 const colorPicker = document.getElementById("colorPicker");
 const colorPara   = document.getElementById("colorPara");
 const colorCode   = document.getElementById("colorCode");
@@ -31,19 +31,17 @@ const applyColor = (hex) => {
 };
 
 colorPicker.addEventListener("input", (e) => applyColor(e.target.value));
-applyColor(colorPicker.value); // initialize on load
+applyColor(colorPicker.value);
 
-/* ===== Image Change (button + image click/keyboard) ===== */
+
 const weatherImg = document.getElementById("weatherImg");
 const sunBtn     = document.getElementById("sunBtn");
 
 const becomeSunny = () => {
-  const sunnySrc = weatherImg.dataset.sunny;   // reads the data-sunny attribute
+  const sunnySrc = weatherImg.dataset.sunny;  
   if (sunnySrc && weatherImg.getAttribute("src") !== sunnySrc) {
     weatherImg.setAttribute("src", sunnySrc);
-    // Optional UX polish:
-    // sunBtn.textContent = "Sunny!";
-    // sunBtn.disabled = true;
+    
   }
 };
 

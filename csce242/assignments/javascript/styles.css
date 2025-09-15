@@ -1,10 +1,9 @@
-/* Starter grid/panel spacing adapted from our in-class grid template (commented per instructions). */
-/* Custom palette — feel free to tweak */
+
 :root{
   --bg: #eef3ef;
   --panel: #faf3dd;
-  --ink: #3e6b6d;     /* headings/body */
-  --accent: #e28995;  /* subtitle accent */
+  --ink: #3e6b6d;     
+  --accent: #e28995;  
   --border: #c7d2c9;
 }
 
@@ -18,7 +17,7 @@ body{
   line-height: 1.5;
 }
 
-/* Accessibility helper for visual-only labels */
+
 .visually-hidden{
   position:absolute !important;
   height:1px; width:1px;
@@ -43,7 +42,7 @@ body{
   font-size: 1.25rem;
 }
 
-/* 3-column desktop → 1-col mobile */
+
 .grid{
   max-width: 980px;
   margin: 0 auto;
@@ -71,7 +70,7 @@ body{
   font-weight: 800;
 }
 
-/* Sunny Times indented lines (match diagram) */
+
 .sunny-text p{ margin: 6px 0; }
 .indent1{ margin-left: 24px; }
 .indent2{ margin-left: 48px; }
@@ -79,7 +78,7 @@ body{
 #sunnyCard{ cursor: pointer; }
 #sunnyCard:focus{ outline: 3px dashed var(--accent); outline-offset: 4px; }
 
-/* Color picker “column” alignment */
+
 .color-row{
   display:flex;
   align-items:center;
@@ -96,7 +95,7 @@ body{
   background:#fff;
 }
 .color-para{
-  min-height: 20px; /* keeps an empty line under picker like the mock */
+  min-height: 20px;
   margin: 10px 18px 4px;
 }
 .color-code{
@@ -104,7 +103,7 @@ body{
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 }
 
-/* Image change area */
+
 .btn{
   margin-left: 18px;
   padding: 4px 10px;
@@ -125,25 +124,22 @@ body{
 }
 .img-wrap img{
   width: 110px;
-  height: 110px;      /* square for seamless swap */
+  height: 110px;      
   object-fit: cover;
   border-radius: 6px;
   border: 1px solid var(--border);
 }
 
-/* Footer */
 .footer{
   text-align:center;
   padding: 10px 0 26px;
   color: #5e8687;
 }
-/* Make the whole column look/act clickable */
-.sunny-panel { cursor: pointer; }
 
-/* Force left alignment & precise indents */
+.sunny-panel { cursor: pointer; }
 .sunny-text{
   text-align: left;
-  --indent-step: 24px; /* tweak this to match your screenshot spacing */
+  --indent-step: 24px; 
 }
 .sunny-text p{ margin: 6px 0; }
 
