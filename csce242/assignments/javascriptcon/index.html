@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Assignment 8 — If Statements</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>Assignment 8</h1>
+    <h2>If Statements</h2>
+
+    
+    <nav class="menu" aria-expanded="false" id="smMenu">
+      <button class="menu-toggle" id="menuBtn" aria-controls="menuItems" aria-expanded="false">
+        <span>Exercises</span>
+        <span class="arrow" aria-hidden="true">▼</span>
+      </button>
+      <div class="menu-items" id="menuItems">
+        <a href="#" data-target="#planting">Exercise 1</a>
+        <a href="#" data-target="#clock">Exercise 2</a>
+      </div>
+    </nav>
+
+   
+    <nav class="nav" aria-label="Exercises">
+      <a href="#" data-target="#planting">Exercise 1</a>
+      <a href="#" data-target="#clock">Exercise 2</a>
+    </nav>
+
+   
+    <section class="panel" id="planting">
+      <div class="prompt">How many days has it been since watering your plant?</div>
+      <div class="row">
+        <input id="days" type="range" min="1" max="12" value="1" />
+      </div>
+
+      <figure class="plant-figure" id="plantPic" aria-hidden="true">
+       
+      </figure>
+
+      <p class="msg-strong" id="daysMsg">It's been 1 day since watering your plant</p>
+      <p class="msg-muted" id="careMsg">Your plant is healthy and happy</p>
+    </section>
+
+  
+    <section class="panel hide" id="clock">
+      <div class="clock-title">Our Digital Clock</div>
+      <p class="clock-time" id="timeNow">--:--</p>
+    </section>
+
+    <p class="byline"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

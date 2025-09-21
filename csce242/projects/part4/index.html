@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects Website — OVO Edition</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header / Nav (sticky on Home) -->
+  <header class="site-header">
+    <div class="container inner">
+      <a class="logo" href="#home" aria-label="Projects home">Projects</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#biography">Biography</a>
+        <a href="#discography">Discography</a>
+        <a href="#media">Media</a>
+        <a href="#projects">All Projects</a>
+        <a href="#project">Project Preview</a>
+        <a href="#community">Community</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Projects Website</h1>
+        <p>OVO-inspired black–gold aesthetic, responsive, and ready for real content later.</p>
+      </div>
+    </section>
+
+    <!-- BIOGRAPHY (added, with columns) -->
+    <section id="biography" class="section-pad">
+      <div class="container">
+        <h2 class="section-title">Biography</h2>
+        <div class="columns">
+          <div class="col">
+            <p>
+              Aubrey “Drake” Graham is a Canadian artist known for blending rap and R&amp;B into
+              a distinct sound with prolific, chart-topping releases. His catalog spans
+              introspective lyrics, melodic hooks, and hit collaborations that shape modern pop.
+            </p>
+            <p>
+              Beyond music, Drake’s OVO brand and business ventures broaden his cultural reach,
+              while themes of ambition, reflection, and momentum run through his work.
+            </p>
+          </div>
+          <div class="col">
+            <ul class="bio-list">
+              <li><strong>Origin:</strong> Toronto, Canada</li>
+              <li><strong>Styles:</strong> Hip-hop, R&amp;B, Pop</li>
+              <li><strong>Notable Themes:</strong> Reflection, success, relationships</li>
+              <li><strong>Awards:</strong> Multiple Grammys &amp; chart records</li>
+              <li><strong>Label/Brand:</strong> OVO Sound</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISCOGRAPHY (albums open CSS-only dialogs) -->
+    <!-- DISCOGRAPHY (albums open CSS-only dialogs) -->
+<section id="discography" class="section-pad">
+  <div class="container">
+    <h2 class="section-title">Discography</h2>
+
+    <div class="album-grid">
+      <a class="album-card" href="#album-take-care" aria-controls="album-take-care" aria-label="Open Take Care details">
+        <div class="album-art" aria-hidden="true">
+          <img src="images/draketakecare.webp" alt="Take Care album cover">
+        </div>
+        <div class="album-info">
+          <h3>Take Care</h3>
+          <p>2011 • Studio Album</p>
+        </div>
+      </a>
+
+      <a class="album-card" href="#album-nwts" aria-controls="album-nwts" aria-label="Open Nothing Was the Same details">
+        <div class="album-art" aria-hidden="true">
+          <img src="images/Drake_-_Nothing_Was_the_Same_cover.png" alt="Nothing Was the Same album cover">
+        </div>
+        <div class="album-info">
+          <h3>Nothing Was the Same</h3>
+          <p>2013 • Studio Album</p>
+        </div>
+      </a>
+
+      <a class="album-card" href="#album-scorpion" aria-controls="album-scorpion" aria-label="Open Scorpion details">
+        <div class="album-art" aria-hidden="true">
+          <img src="images/drakescorp.webp" alt="Scorpion album cover">
+        </div>
+        <div class="album-info">
+          <h3>Scorpion</h3>
+          <p>2018 • Double Album</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+    <!-- MEDIA (structured; responsive, non-tiny iframe) -->
+    <section id="media" class="section-pad">
+      <div class="container">
+        <h2 class="section-title">Media</h2>
+
+        <div class="media-sections">
+          <section class="media-block">
+            <h3 class="media-heading">Featured Video</h3>
+            <div class="embed">
+              <iframe
+                class="embed-item"
+                src="https://www.youtube.com/embed/uxpDa-c-4Mc"
+                title="Drake — Featured Video"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </section>
+
+          <section class="media-block">
+            <h3 class="media-heading">Photo Gallery</h3>
+            <div class="gallery">
+              <img src="images/images (1).jpg" alt="OVO aesthetic 1">
+              <img src="images/images (2).jpg" alt="OVO aesthetic 2">
+              <img src="images/images.jpg" alt="OVO aesthetic 3">
+              <img src="images/drake-new-songs.webp" alt="OVO aesthetic 4">
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED  -->
+    <section class="container stack section-pad">
+      <h2 class="section-title">Featured</h2>
+      <div class="grid">
+        <article class="card">
+          <a href="#project">
+            <div class="card-media">
+              <img src="images/d1.jpg" alt="Project 01 preview">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Project 01</h3>
+              <p class="card-meta">Category · 2025</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="#project">
+            <div class="card-media">
+              <img src="images/d2.jpg" alt="Project 02 preview">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Project 02</h3>
+              <p class="card-meta">Category · 2025</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="#project">
+            <div class="card-media">
+              <img src="images/d3.jpg" alt="Project 03 preview">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Project 03</h3>
+              <p class="card-meta">Category · 2025</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="card">
+          <a href="#project">
+            <div class="card-media">
+              <img src="images/d4.jpg" alt="Project 04 preview">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Project 04</h3>
+              <p class="card-meta">Category · 2025</p>
+            </div>
+          </a>
+        </article>
+      </div>
+
+      <div>
+        <a class="btn btn--accent" href="#projects">View all projects</a>
+      </div>
+    </section>
+
+    <!-- ALL PROJECTS  -->
+    <section id="projects">
+      <div class="hero">
+        <div class="container">
+          <h1>All Projects</h1>
+          <p>Browse the full collection (placeholder images & text).</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="toolbar" role="group" aria-label="Filters and sort">
+          <div class="filters" aria-label="Filters">
+            <a href="#projects">All</a>
+            <a href="#projects">Web</a>
+            <a href="#projects">Data</a>
+            <a href="#projects">Design</a>
+            <a href="#projects">Other</a>
+          </div>
+          <div class="sort">Sort: Featured · New · A–Z</div>
+        </div>
+
+        <div class="grid" aria-label="Projects grid">
+          <!-- Cards link to the single preview section -->
+          <article class="card">
+            <a href="#project">
+              <div class="card-media">
+                <img src="images/d5.webp" alt="Project 01 preview">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Project 01</h3>
+                <p class="card-meta">Web · 2025</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="card">
+            <a href="#project">
+              <div class="card-media">
+                <img src="images/d6.jpg" alt="Project 02 preview">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Project 02</h3>
+                <p class="card-meta">Design · 2025</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="card">
+            <a href="#project">
+              <div class="card-media">
+                <img src="images/d7.jpg" alt="Project 03 preview">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Project 03</h3>
+                <p class="card-meta">Data · 2024</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="card">
+            <a href="#project">
+              <div class="card-media">
+                <img src="images/d9.webp" alt="Project 04 preview">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Project 04</h3>
+                <p class="card-meta">Other · 2024</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="card">
+            <a href="#project">
+              <div class="card-media">
+                <img src="images/d8.jpg" alt="Project 05 preview">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Project 05</h3>
+                <p class="card-meta">Web · 2023</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="card">
+            <a href="#project">
+              <div class="card-media">
+                <img src="images/d10.jpg" alt="Project 06 preview">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Project 06</h3>
+                <p class="card-meta">Design · 2023</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="card">
+            <a href="#project">
+              <div class="card-media">
+                <img src="images/d11.jpg" alt="Project 07 preview">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Project 07</h3>
+                <p class="card-meta">Data · 2022</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="card">
+            <a href="#project">
+              <div class="card-media">
+                <img src="images/Brickner-Wood-Drake.webp" alt="Project 08 preview">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Project 08</h3>
+                <p class="card-meta">Other · 2022</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT PREVIEW  -->
+    <section id="project">
+      <div class="hero">
+        <div class="container">
+          <h1>Project Preview</h1>
+          <p>One preview section only (per requirements).</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="detail" aria-label="Project detail">
+          <div class="detail-media">
+            <img src="images/GettyImages-595695782.webp" alt="Project hero placeholder image">
+          </div>
+          <div class="detail-info">
+            <h2 class="title">Project Title</h2>
+            <p class="kv">
+              <span><strong>Category:</strong> Web</span>
+              <span><strong>Year:</strong> 2025</span>
+            </p>
+            <p class="detail-desc">
+              Placeholder description text for the project. Replace this later with the real write-up,
+              goals, constraints, and outcomes. OVO-inspired palette keeps it clean and premium.
+            </p>
+            <div class="detail-actions">
+              <a class="btn btn--accent" href="#projects">← Back to all projects</a>
+              <a class="btn" href="#home">Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMUNITY (one word, complete items) -->
+    <section id="community" class="section-pad">
+      <div class="container">
+        <h2 class="section-title">Community</h2>
+        <div class="columns">
+          <div class="col">
+            <ul class="clean-list">
+              <li><strong>Fan Meetups:</strong> Monthly listening parties &amp; release nights</li>
+              <li><strong>Playlists:</strong> Curated OVO vibes updated weekly</li>
+              <li><strong>Spotlight:</strong> Feature fan art &amp; covers on the homepage</li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul class="clean-list">
+              <li><strong>Guidelines:</strong> Be respectful, keep it positive, credit creators</li>
+              <li><strong>Share:</strong> Tag <em>#OVOFam</em> to get featured</li>
+              <li><strong>Newsletter:</strong> Sign-up UI coming soon (no login required)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="hero">
+        <div class="container">
+          <h1>About</h1>
+          <p>Actual headers; placeholder body text for now.</p>
+        </div>
+      </div>
+
+      <div class="container stack section-pad">
+        <p>
+          This site showcases project work in a clean, black–gold–paper palette inspired by OVO. Content,
+          imagery, and categories are placeholders and will be updated later.
+        </p>
+        <p>
+          <em>Note: Any changes suggested to the wire-frames have been addressed here.</em>
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT (forms page UI only) -->
+    <section id="contact">
+      <div class="hero">
+        <div class="container">
+          <h1>Contact</h1>
+          <p>Include the page and everything else on it; form behavior not required.</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <form class="form" aria-label="Contact form (UI only, no submission)">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your name" />
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="you@example.com" />
+          </div>
+
+          <div class="field">
+            <label for="msg">Message</label>
+            <textarea id="msg" placeholder="Your message..."></textarea>
+          </div>
+
+          <div class="note">
+            This is a non-functional demo form .
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- CSS-only album dialogs -->
+  <section id="album-take-care" class="modal" role="dialog" aria-modal="true" aria-labelledby="tc-title">
+    <div class="modal-backdrop" aria-hidden="true"><a class="modal-close-area" href="#discography" aria-label="Close"></a></div>
+    <div class="modal-card">
+      <a class="modal-close" href="#discography" aria-label="Close">×</a>
+      <h3 id="tc-title">Take Care (2011)</h3>
+      <p>Atmospheric production and introspective songwriting; a modern classic.</p>
+      <ul class="modal-list">
+        <li><strong>Highlights:</strong> “Take Care”, “Headlines”, “Crew Love”</li>
+        <li><strong>Vibe:</strong> Moody, reflective, nocturnal</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="album-nwts" class="modal" role="dialog" aria-modal="true" aria-labelledby="nwts-title">
+    <div class="modal-backdrop" aria-hidden="true"><a class="modal-close-area" href="#discography" aria-label="Close"></a></div>
+    <div class="modal-card">
+      <a class="modal-close" href="#discography" aria-label="Close">×</a>
+      <h3 id="nwts-title">Nothing Was the Same (2013)</h3>
+      <p>Confident flows with widescreen production—an inflection point for Drake.</p>
+      <ul class="modal-list">
+        <li><strong>Highlights:</strong> “Started From the Bottom”, “Hold On, We’re Going Home”</li>
+        <li><strong>Vibe:</strong> Triumphant, polished, cinematic</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="album-scorpion" class="modal" role="dialog" aria-modal="true" aria-labelledby="scorpion-title">
+    <div class="modal-backdrop" aria-hidden="true"><a class="modal-close-area" href="#discography" aria-label="Close"></a></div>
+    <div class="modal-card">
+      <a class="modal-close" href="#discography" aria-label="Close">×</a>
+      <h3 id="scorpion-title">Scorpion (2018)</h3>
+      <p>Double album spanning rap and R&amp;B with blockbuster singles.</p>
+      <ul class="modal-list">
+        <li><strong>Highlights:</strong> “God’s Plan”, “In My Feelings”, “Nice for What”</li>
+        <li><strong>Vibe:</strong> Expansive, dual-sided, chart-ready</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 Projects Website</div>
+  </footer>
+</body>
+</html>
