@@ -1,3 +1,4 @@
+/* ===== Theme / Palette ===== */
 :root{
   --bg:#eef0e7;
   --panel:#ffffff;
@@ -5,9 +6,27 @@
   --muted:#6d8f8f;
   --accent:#c97f7d;
   --border:#9db3ad;
+
+  
+  --sun:#f6b21a;
+
+  --pot:#b85a2a;        
+  --stem:#2f7d32;
+  --leaf:#4caf50;
+
+  --water:#2196f3;      
+
+  --pot-dry:#8b4a2a;    
+  --stem-dry:#7a5a2f;
+  --leaf-dry:#a8bf3f;
+  --petal:#d92929;      
+
+  --pot-dead:#6b3a1e;   
+  --stem-dead:#5a463f;
+  --leaf-dead:#6e6e6e;
 }
 
-
+/* ===== Base Layout ===== */
 html,body{margin:0}
 body{
   font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
@@ -17,8 +36,9 @@ body{
 .wrap{max-width:900px; margin:2.5rem auto; padding:0 1rem; text-align:center}
 h1{font-size:2.2rem; margin:.2rem 0}
 h2{color:var(--accent); margin:.2rem 0 1rem}
-.byline{color:var(--muted); margin:-.25rem 0 1.25rem}
+.byline{color:var(--muted); margin:1rem 0}
 
+/* ===== Panels ===== */
 .panel{
   background:var(--panel);
   border:1px solid var(--border);
@@ -58,7 +78,7 @@ h2{color:var(--accent); margin:.2rem 0 1rem}
   width:100%;
   display:flex; align-items:center; justify-content:space-between;
   padding:.5rem .75rem; border:1px solid var(--border); border-radius:.25rem;
-  background:rgba(255,255,255,.75);
+  background:rgba(255,255,255,.8);
   color:var(--ink);
   cursor:pointer;
 }
@@ -85,10 +105,11 @@ h2{color:var(--accent); margin:.2rem 0 1rem}
   .nav{display:none}
 }
 
-
+/* ===== Helpers ===== */
 .hide{display:none}
+svg{width:100%; height:auto; display:block}
 
-
+/* ===== Planting UI ===== */
 .prompt{margin:.25rem 0 1rem; color:var(--muted)}
 .row{display:flex; align-items:center; justify-content:center; gap:1rem; flex-wrap:wrap}
 input[type="range"]{width:280px; accent-color:#1a73e8}
@@ -96,9 +117,23 @@ input[type="range"]{width:280px; accent-color:#1a73e8}
 .msg-strong{font-weight:600; margin:.25rem 0}
 .msg-muted{color:var(--muted); margin:.1rem 0}
 
-
+/* ===== Clock ===== */
 .clock-title{font-weight:700; color:var(--ink); margin:0 0 .35rem}
 .clock-time{font-size:1.75rem; color:var(--muted); margin:0}
 
 
-svg{width:100%; height:auto; display:block}
+svg .sun       { fill: var(--sun); }
+svg .pot       { fill: var(--pot); }
+svg .stem      { stroke: var(--stem); stroke-width:6; fill:none; stroke-linecap:round; }
+svg .leaf      { fill: var(--leaf); }
+
+svg .water     { fill: var(--water); }
+
+svg .pot-dry   { fill: var(--pot-dry); }
+svg .stem-dry  { stroke: var(--stem-dry); stroke-width:6; fill:none; stroke-linecap:round; }
+svg .leaf-dry  { fill: var(--leaf-dry); }
+svg .petal     { fill: var(--petal); }
+
+svg .pot-dead  { fill: var(--pot-dead); }
+svg .stem-dead { stroke: var(--stem-dead); stroke-width:6; fill:none; stroke-linecap:round; }
+svg .leaf-dead { fill: var(--leaf-dead); }
