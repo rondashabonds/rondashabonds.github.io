@@ -1,0 +1,102 @@
+
+:root{
+  --bg-day:#bfe2ee;
+  --bg-night:#05070b;
+  --ink-day:#5b7f86;
+  --ink-night:#e8ecf1;
+}
+
+* { box-sizing:border-box }
+html, body {
+  margin:0;
+  height:100%;
+  font:16px/1.5 system-ui, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+body.day { background:var(--bg-day); color:var(--ink-day) }
+body.night { background:var(--bg-night); color:var(--ink-night) }
+
+header { text-align:center; padding:24px 12px 8px }
+h1 { margin:0 0 6px; font-size:40px; opacity:.9; letter-spacing:.5px }
+h2 { margin:0 0 12px; color:#e5858f; font-weight:800; letter-spacing:.5px }
+
+button{
+  padding:6px 12px;
+  border-radius:8px;
+  border:1px solid #999;
+  background:#fff;
+  cursor:pointer;
+}
+body.night button{ background:#111; color:#ddd; border-color:#444 }
+
+#stage{ width:min(1200px, 92%); margin:0 auto 32px; position:relative }
+
+#sky-top{ position:relative; height:120px; }
+
+
+.row{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:24px;
+  padding:0 16px;
+}
+#cloud-row{ margin-top:8px; height:150px }
+#tree-row{ margin-top:48px; height:160px }
+
+
+.cloud{
+  position:relative;
+  width:120px; height:56px;
+  border-radius:999px;
+  background:#f5f7fa;
+  box-shadow:
+    32px -16px 0 12px #f5f7fa,
+    64px -6px 0 8px #f5f7fa,
+    88px -18px 0 16px #f5f7fa,
+    16px 6px 0 10px rgba(0,0,0,.04),
+    56px 8px 0 10px rgba(0,0,0,.04);
+  opacity:.95;
+}
+body.night .cloud{ background:#e6e6e6; box-shadow:
+    32px -16px 0 12px #e6e6e6,
+    64px -6px 0 8px #e6e6e6,
+    88px -18px 0 16px #e6e6e6,
+    16px 6px 0 10px rgba(255,255,255,.04),
+    56px 8px 0 10px rgba(255,255,255,.04);
+}
+
+
+.tree{
+  width:150px; height:150px; position:relative;
+  display:grid; place-items:end center;
+}
+.tree .canopy{
+  width:90px; height:90px; border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, #2aa60f 0 35%, #0c7807 70% 100%);
+  margin-bottom:8px;
+}
+.tree .trunk{
+  width:20px; height:32px; border-radius:4px;
+  background:#8c4c2e;
+}
+
+
+.sun, .moon{ position:absolute; top:10px; right:4%; width:110px; height:110px; border-radius:50% }
+.sun{ background:#ffd300; box-shadow:0 0 0 10px rgba(255,211,0,.15) }
+.moon{
+  background:#f2e793;
+  position:absolute;
+}
+.moon::after{
+
+  content:"";
+  position:absolute; inset:0;
+  border-radius:50%;
+  box-shadow:35px 0 0 0 #02030a inset; 
+}
+
+
+.sig{
+  text-align:center; margin:28px 0 60px; opacity:.7; font-size:14px;
+}
