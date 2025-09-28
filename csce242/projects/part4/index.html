@@ -3,14 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <title>OVO Edition</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header / Nav (sticky on Home) -->
+  <!-- Header / Nav -->
   <header class="site-header">
     <div class="container inner">
-      <a class="logo" href="#home" aria-label="Projects home">Projects</a>
-      <nav class="nav" aria-label="Primary">
+      <a class="logo" href="#home" aria-label="Projects home">
+        
+        <img src="images/ovothing-removebg-preview.png" alt="" onerror="this.remove()">
+        <span>OVO Projects</span>
+      </a>
+
+      <!-- Hamburger -->
+      <button id="menuBtn" class="hamburger" aria-label="Toggle menu"
+              aria-expanded="false" aria-controls="primaryNav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primaryNav" class="nav" aria-label="Primary">
         <a href="#home">Home</a>
         <a href="#biography">Biography</a>
         <a href="#discography">Discography</a>
@@ -33,7 +45,7 @@
       </div>
     </section>
 
-    <!-- BIOGRAPHY (added, with columns) -->
+    <!-- BIOGRAPHY -->
     <section id="biography" class="section-pad">
       <div class="container">
         <h2 class="section-title">Biography</h2>
@@ -62,48 +74,46 @@
       </div>
     </section>
 
-    <!-- DISCOGRAPHY (albums open CSS-only dialogs) -->
-    <!-- DISCOGRAPHY (albums open CSS-only dialogs) -->
-<section id="discography" class="section-pad">
-  <div class="container">
-    <h2 class="section-title">Discography</h2>
+    <!-- DISCOGRAPHY -->
+    <section id="discography" class="section-pad">
+      <div class="container">
+        <h2 class="section-title">Discography</h2>
 
-    <div class="album-grid">
-      <a class="album-card" href="#album-take-care" aria-controls="album-take-care" aria-label="Open Take Care details">
-        <div class="album-art" aria-hidden="true">
-          <img src="images/draketakecare.webp" alt="Take Care album cover">
-        </div>
-        <div class="album-info">
-          <h3>Take Care</h3>
-          <p>2011 • Studio Album</p>
-        </div>
-      </a>
+        <div class="album-grid">
+          <a class="album-card" href="#album-take-care" aria-controls="album-take-care" aria-label="Open Take Care details">
+            <div class="album-art" aria-hidden="true">
+              <img src="images/draketakecare.webp" alt="Take Care album cover">
+            </div>
+            <div class="album-info">
+              <h3>Take Care</h3>
+              <p>2011 • Studio Album</p>
+            </div>
+          </a>
 
-      <a class="album-card" href="#album-nwts" aria-controls="album-nwts" aria-label="Open Nothing Was the Same details">
-        <div class="album-art" aria-hidden="true">
-          <img src="images/Drake_-_Nothing_Was_the_Same_cover.png" alt="Nothing Was the Same album cover">
-        </div>
-        <div class="album-info">
-          <h3>Nothing Was the Same</h3>
-          <p>2013 • Studio Album</p>
-        </div>
-      </a>
+          <a class="album-card" href="#album-nwts" aria-controls="album-nwts" aria-label="Open Nothing Was the Same details">
+            <div class="album-art" aria-hidden="true">
+              <img src="images/Drake_-_Nothing_Was_the_Same_cover.png" alt="Nothing Was the Same album cover">
+            </div>
+            <div class="album-info">
+              <h3>Nothing Was the Same</h3>
+              <p>2013 • Studio Album</p>
+            </div>
+          </a>
 
-      <a class="album-card" href="#album-scorpion" aria-controls="album-scorpion" aria-label="Open Scorpion details">
-        <div class="album-art" aria-hidden="true">
-          <img src="images/drakescorp.webp" alt="Scorpion album cover">
+          <a class="album-card" href="#album-scorpion" aria-controls="album-scorpion" aria-label="Open Scorpion details">
+            <div class="album-art" aria-hidden="true">
+              <img src="images/drakescorp.webp" alt="Scorpion album cover">
+            </div>
+            <div class="album-info">
+              <h3>Scorpion</h3>
+              <p>2018 • Double Album</p>
+            </div>
+          </a>
         </div>
-        <div class="album-info">
-          <h3>Scorpion</h3>
-          <p>2018 • Double Album</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
 
-
-    <!-- MEDIA (structured; responsive, non-tiny iframe) -->
+    <!-- MEDIA -->
     <section id="media" class="section-pad">
       <div class="container">
         <h2 class="section-title">Media</h2>
@@ -114,7 +124,7 @@
             <div class="embed">
               <iframe
                 class="embed-item"
-                src="https://www.youtube.com/watch?v=cfl30Nl4djY"
+                src="https://www.youtube-nocookie.com/embed/cfl30Nl4djY?rel=0"
                 title="Drake — Featured Video"
                 loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -137,7 +147,7 @@
       </div>
     </section>
 
-    <!-- FEATURED  -->
+    <!-- FEATURED -->
     <section class="container stack section-pad">
       <h2 class="section-title">Featured</h2>
       <div class="grid">
@@ -195,7 +205,7 @@
       </div>
     </section>
 
-    <!-- ALL PROJECTS  -->
+    <!-- ALL PROJECTS -->
     <section id="projects">
       <div class="hero">
         <div class="container">
@@ -217,7 +227,6 @@
         </div>
 
         <div class="grid" aria-label="Projects grid">
-          <!-- Cards link to the single preview section -->
           <article class="card">
             <a href="#project">
               <div class="card-media">
@@ -317,7 +326,7 @@
       </div>
     </section>
 
-    <!-- PROJECT PREVIEW  -->
+    <!-- PROJECT PREVIEW -->
     <section id="project">
       <div class="hero">
         <div class="container">
@@ -349,7 +358,7 @@
       </div>
     </section>
 
-    <!-- COMMUNITY (one word, complete items) -->
+    <!-- COMMUNITY -->
     <section id="community" class="section-pad">
       <div class="container">
         <h2 class="section-title">Community</h2>
@@ -377,31 +386,39 @@
       <div class="hero">
         <div class="container">
           <h1>About</h1>
-          <p>about section for Mr OVO.</p>
+          <p>About section for Mr OVO.</p>
         </div>
       </div>
 
       <div class="container stack section-pad">
         <p>
-          Drake’s hometown of Toronto, Canada, is frequently referenced in his songs, earning him the nickname “The 6 God.”
+          Drake’s hometown of Toronto—“The 6”—is woven through his music, visuals, and brand identity. OVO has grown
+          from a creative collective into a label, fashion line, and cultural imprint that collaborates across music,
+          sports, and lifestyle.
         </p>
         <p>
-          <em></em>
+          This site is an OVO-inspired portfolio that experiments with CSS-only modals, responsive grids, and a warm,
+          gold-accent palette. It’s designed to be extendable: swap images, add albums, and connect real project pages.
         </p>
+        <ul class="bio-list">
+          <li><strong>Focus:</strong> Clean, accessible UI with consistent rhythm and spacing</li>
+          <li><strong>Tech:</strong> HTML/CSS, minimal JS, CSS-only dialogs via <code>:target</code></li>
+          <li><strong>Next:</strong> Hook up forms, add search/filter logic, and lazy-load media</li>
+        </ul>
       </div>
     </section>
 
-    <!-- CONTACT (forms page UI only) -->
+    <!-- CONTACT -->
     <section id="contact">
       <div class="hero">
         <div class="container">
           <h1>Contact</h1>
-          <p>Contact form.</p>
+          <p>Drop a note.</p>
         </div>
       </div>
 
       <div class="container">
-        <form class="form" aria-label="Contact form (UI only, no submission)">
+        <form class="form" aria-label="Contact form (UI only, no submission)" onsubmit="event.preventDefault()">
           <div class="field">
             <label for="name">Name</label>
             <input id="name" type="text" placeholder="Your name" />
@@ -417,8 +434,13 @@
             <textarea id="msg" placeholder="Your message..."></textarea>
           </div>
 
+          <div class="actions">
+            <button class="btn btn--accent" type="submit">Send</button>
+            <a class="btn" href="#home">Cancel</a>
+          </div>
+
           <div class="note">
-            
+            This is a visual demo; no messages are sent.
           </div>
         </form>
       </div>
@@ -466,7 +488,9 @@
   </section>
 
   <footer class="site-footer">
-    <div class="container">© 2025 Projects Website</div>
+    <div class="container"></div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
