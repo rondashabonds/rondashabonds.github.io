@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Assignment 11 — Classes</title>
+
+  <!-- W3CSS for modal (required by assignment) -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- Optional W3 theme for nicer defaults -->
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-light-green.css">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Assignment 11</h1>
+    <h2>Classes</h2>
+  </header>
+
+  <main class="container">
+    <!-- Cards get injected here -->
+    <section id="gallery" class="gallery" aria-label="Paintings gallery"></section>
+
+    <p class="credits">
+       <a href="https://pixabay.com/" target="_blank" rel="noopener">Pixabay</a>.
+      
+    </p>
+  </main>
+
+  <!-- W3CSS Modal -->
+  <div id="paintingModal" class="w3-modal" aria-hidden="true">
+    <div class="w3-modal-content w3-animate-top modal-card">
+      <button id="modalClose" class="w3-button w3-display-topright modal-close" aria-label="Close">×</button>
+
+      <div class="w3-container modal-header">
+        <h3 id="modalTitle" class="modal-title"></h3>
+        <p class="modal-byline">by <span id="modalArtist"></span></p>
+      </div>
+
+      <div class="w3-container modal-body">
+        <!-- Frame box toggles .framed / .unframed -->
+        <div id="frameBox" class="frameBox unframed">
+          <img id="modalImg" class="modal-img" src="" alt="">
+        </div>
+      </div>
+
+      <div class="w3-container modal-footer">
+        <span id="frameNote" class="frame-note"></span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <small></small>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
