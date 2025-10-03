@@ -1,98 +1,100 @@
-// ----- Painting class -----
+
 class Painting {
-  constructor(name, artist, image, framed = false) {
+  constructor({ name, artist, image, framed = false }) {
     this.name = name;
     this.artist = artist;
-    this.image = image;     // path under /images or full URL
-    this.framed = framed;   // boolean
+    this.image = image;      
+    this.framed = framed;    
   }
 
-  // Create a DOM section that shows the title and thumbnail
-  createSection(onClick) {
-    const sec = document.createElement('section');
-    sec.className = 'card';
-    sec.tabIndex = 0; // focusable for accessibility
+ 
+  getSection() {
+    const section = document.createElement('article');
+    section.className = 'card';
+    section.setAttribute('tabindex', '0'); 
 
-    const h3 = document.createElement('h3');
-    h3.className = 'title';
-    h3.textContent = this.name;
+    section.innerHTML = `
+      <h3>${this.name}</h3>
+      <p>by ${this.artist}</p>
+      <img class="thumb" src="images/${this.image}" alt="${this.name} by ${this.artist}">
+    `;
 
-    const wrap = document.createElement('div');
-    wrap.className = 'thumb-wrap';
-
-    const img = document.createElement('img');
-    img.src = this.image;
-    img.alt = `${this.name} by ${this.artist}`;
-
-    wrap.appendChild(img);
-    sec.appendChild(h3);
-    sec.appendChild(wrap);
-
-    // Click/open modal anywhere on the card (or Enter key)
-    const open = () => onClick(this);
-    sec.addEventListener('click', open);
-    sec.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        open();
-      }
+    
+    section.addEventListener('click', () => this.showModal());
+    section.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') this.showModal();
     });
 
-    return sec;
+    return section;
+  }
+
+ 
+  showModal() {
+    const modal = document.getElementById('paintingModal');
+    const title = document.getElementById('modalTitle');
+    const artist = document.getElementById('modalArtist');
+    const img = document.getElementById('modalImg');
+    const frameWrap = document.getElementById('modalFrameWrap');
+    const framedFlag = document.getElementById('modalFramed');
+
+    title.textContent = this.name;
+    artist.textContent = `by ${this.artist}`;
+    img.src = `images/${this.image}`;
+    img.alt = `${this.name} by ${this.artist}`;
+
+  
+    frameWrap.classList.toggle('framed', !!this.framed);
+    framedFlag.textContent = this.framed ? 'Framed' : 'Unframed';
+
+    modal.style.display = 'block';
   }
 }
 
-// ----- Demo data -----
-// Put your images in /images and keep these filenames or change paths below.
-// (Examples match the screenshots' vibe.)
 const paintings = [
-  new Painting('The Bee', 'RichardsDrawings', 'images/bee.jpg', true),
-  new Painting('Dream love kitten', 'CDD20', 'images/kitten.jpg', false),
-  new Painting('Flowers and Butterflies', 'ElisaRiva', 'images/flowers.jpg', false),
-  new Painting('Forest Animals', 'vector_corp', 'images/forest.jpg', false),
-  new Painting('Blue Bird', 'Clker-Free-Vector-Images', 'images/bird.jpg', true),
+  new Painting({
+    name: 'Starry Night',
+    artist: 'Vincent van Gogh',
+    image: 'starry-night.jpg',
+    framed: true
+  }),
+  new Painting({
+    name: 'Mona Lisa',
+    artist: 'Leonardo da Vinci',
+    image: 'mona-lisa.webp',
+    framed: false
+  }),
+  new Painting({
+    name: 'The Persistence of Memory',
+    artist: 'Salvador Dalí',
+    image: 'persistence-of-memory.jpg',
+    framed: true
+  }),
+  new Painting({
+    name: 'Girl with a Pearl Earring',
+    artist: 'Johannes Vermeer',
+    image: 'girl-with-a-pearl-earring.jpg',
+    framed: false
+  }),
+  new Painting({
+    name: 'The Scream',
+    artist: 'Edvard Munch',
+    image: 'the-scream.jpg',
+    framed: true
+  })
 ];
 
-// ----- Render gallery -----
+
 const gallery = document.getElementById('gallery');
-const modal = document.getElementById('paintingModal');
-const modalTitle = document.getElementById('modalTitle');
-const modalArtist = document.getElementById('modalArtist');
-const modalImg = document.getElementById('modalImg');
-const frameBox = document.getElementById('frameBox');
-const frameNote = document.getElementById('frameNote');
+paintings.forEach(p => gallery.appendChild(p.getSection()));
+
+
+const modalEl = document.getElementById('paintingModal');
 const modalClose = document.getElementById('modalClose');
 
-function openModal(painting) {
-  modalTitle.textContent = painting.name;
-  modalArtist.textContent = painting.artist;
-  modalImg.src = painting.image;
-  modalImg.alt = `${painting.name} by ${painting.artist}`;
-
-  // Toggle frame style + note
-  frameBox.classList.toggle('framed', painting.framed);
-  frameBox.classList.toggle('unframed', !painting.framed);
-  frameNote.textContent = painting.framed ? 'Framed' : 'Not framed';
-
-  modal.style.display = 'block';
-  modal.setAttribute('aria-hidden', 'false');
-}
-
-function closeModal() {
-  modal.style.display = 'none';
-  modal.setAttribute('aria-hidden', 'true');
-}
-
-modalClose.addEventListener('click', closeModal);
-// click outside the modal card to close
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) closeModal();
+modalClose.addEventListener('click', () => modalEl.style.display = 'none');
+window.addEventListener('click', (e) => {
+  if (e.target === modalEl) modalEl.style.display = 'none';
 });
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && modal.style.display === 'block') closeModal();
-});
-
-// Build all cards
-paintings.forEach(p => {
-  gallery.appendChild(p.createSection(openModal));
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') modalEl.style.display = 'none';
 });
