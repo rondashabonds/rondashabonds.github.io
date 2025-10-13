@@ -81,5 +81,54 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-</body>
+</body>  
+<section id="problem-statement" class="container">
+  <h1>Problem Statement: Campus Mental-Wellness Navigator + Kit Requests</h1>
+
+  <p><strong>Background.</strong> Many UofSC students struggle to find the right mental-wellness resources quickly; kit requests are handled manually.</p>
+  <p><strong>Users.</strong> UofSC students (primary), mentors & volunteers (secondary).</p>
+  <p><strong>Problem.</strong> Students abandon searches; volunteers face duplicate questions and lose request visibility.</p>
+  <p><strong>Goal.</strong> Recommend the right resource in &le; 60s and streamline “You Matter” kit requests with transparent status.</p>
+
+  <h2>Scope</h2>
+  <ul>
+    <li><em>In:</em> Intake flow, recommendations, kit request form & status, basic volunteer dashboard, email confirmations.</li>
+    <li><em>Out (now):</em> Medical advice, live chat, insurance billing, native apps.</li>
+  </ul>
+
+  <h2>Constraints & Assumptions</h2>
+  <ul>
+    <li>Static hosting (GitHub Pages), WCAG AA, mobile-first, minimal PII.</li>
+    <li>Resources managed via a JSON file in repo; updated weekly.</li>
+  </ul>
+
+  <h2>Success Metrics & Acceptance</h2>
+  <ul>
+    <li>≥80% users get a recommendation in ≤60s; ≥50% fewer duplicate DMs; ≥90% kit requests show status ≤24h.</li>
+    <li>5-question intake → 1–3 matched resources (hours, location, link).</li>
+    <li>Kit request returns confirmation ID + email; volunteer status: Received → Packed → Ready → Picked Up.</li>
+    <li>Lighthouse accessibility ≥90.</li>
+  </ul>
+
+  <details>
+    <summary>Risks & Mitigations</summary>
+    <ul>
+      <li>Stale info → JSON updated weekly.</li>
+      <li>Privacy → collect only what’s needed.</li>
+      <li>Load → static site + lightweight JS.</li>
+    </ul>
+  </details>
+</section>
+
+<!-- Optional: simple “data model” placeholder you can wire up later -->
+<script type="application/json" id="resources-data">
+{
+  "resources": [
+    {"name":"Counseling & Psychiatry (CAPS)","type":"routine","hours":"Mon–Fri 8–5","location":"Thomson Building","url":"#"},
+    {"name":"24/7 Crisis Line","type":"urgent","hours":"Always","location":"Phone","url":"tel:000-000-0000"},
+    {"name":"Peer Support Hours","type":"peer","hours":"Mon–Thu 5–8","location":"Student Union 2F","url":"#"}
+  ]
+}
+</script>
+
 </html>
