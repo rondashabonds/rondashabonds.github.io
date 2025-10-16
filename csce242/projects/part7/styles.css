@@ -266,3 +266,65 @@ a:focus, button:focus, input:focus, textarea:focus{
 .field textarea{ min-height: 140px; resize: vertical; }
 .actions{ margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap; }
 .note{ font-size: .9rem; opacity: .7; margin-top: 8px; }
+/* Layout */
+#contact .container { max-width: 1000px; margin: 0 auto; padding: 1rem; }
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 320px);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.form-fields { display: grid; gap: 1rem; }
+
+.field { display: grid; gap: 0.5rem; }
+.field label { font-weight: 600; }
+.field input, .field textarea {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #d6d6d6;
+  border-radius: 10px;
+  font: inherit;
+}
+.field textarea { min-height: 140px; resize: vertical; }
+
+.actions { display: flex; gap: 0.75rem; align-items: center; }
+.btn {
+  border: 1px solid #111;
+  background: #fff;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.btn--accent {
+  background: #111; color: #fff; border-color: #111;
+}
+.btn[disabled] { opacity: 0.6; cursor: not-allowed; }
+
+/* Status panel */
+.note {
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 1rem;
+  min-height: 80px;
+  background: #fafafa;
+  display: grid;
+  align-content: start;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+.note--idle { color: #666; }
+.note--success {
+  border-color: #c7efd9; background: #f3fdf8; color: #155b39;
+}
+.note--error {
+  border-color: #ffd2d2; background: #fff6f6; color: #7a1f1f;
+}
+.note .title { font-weight: 700; }
+
+/* Responsive: stack on small screens */
+@media (max-width: 760px) {
+  .form { grid-template-columns: 1fr; }
+  .note { order: 2; }
+}
