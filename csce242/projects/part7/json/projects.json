@@ -1,0 +1,76 @@
+{
+  "projects": [
+    {
+      "_id": 1,
+      "title": "Project 01",
+      "category": "Web",
+      "year": 2025,
+      "img_name": "images/d5.webp",
+      "blurb": "Responsive landing page with OVO styling.",
+      "href": "#project"
+    },
+    {
+      "_id": 2,
+      "title": "Project 02",
+      "category": "Design",
+      "year": 2025,
+      "img_name": "images/d6.jpg",
+      "blurb": "Poster set inspired by OVO motifs.",
+      "href": "#project"
+    },
+    {
+      "_id": 3,
+      "title": "Project 03",
+      "category": "Data",
+      "year": 2024,
+      "img_name": "images/d7.jpg",
+      "blurb": "Streaming analytics dashboard concept.",
+      "href": "#project"
+    },
+    {
+      "_id": 4,
+      "title": "Project 04",
+      "category": "Other",
+      "year": 2024,
+      "img_name": "images/d9.webp",
+      "blurb": "Event night visual pack.",
+      "href": "#project"
+    },
+    {
+      "_id": 5,
+      "title": "Project 05",
+      "category": "Web",
+      "year": 2023,
+      "img_name": "images/d8.jpg",
+      "blurb": "OVO theme micro-site.",
+      "href": "#project"
+    },
+    {
+      "_id": 6,
+      "title": "Project 06",
+      "category": "Design",
+      "year": 2023,
+      "img_name": "images/d10.jpg",
+      "blurb": "Album art explorations.",
+      "href": "#project"
+    },
+    {
+      "_id": 7,
+      "title": "Project 07",
+      "category": "Data",
+      "year": 2022,
+      "img_name": "images/d11.jpg",
+      "blurb": "Listener segmentation mockup.",
+      "href": "#project"
+    },
+    {
+      "_id": 8,
+      "title": "Project 08",
+      "category": "Other",
+      "year": 2022,
+      "img_name": "images/Brickner-Wood-Drake.webp",
+      "blurb": "Photography and moodboard.",
+      "href": "#project"
+    }
+  ]
+}
