@@ -1,22 +1,5 @@
 <!doctype html>
 <html lang="en">
-
-<!-- 
-============================================================
-PORTFOLIO 4 – RESUME FINALIZATION + PROJECT REPO LINKS
-Student: Rondasha “Gabby” Bonds
-
-✔ Adjusted resume based on peer feedback
-✔ Fully converted resume from PDF → HTML
-✔ Added Resume link to navbar
-✔ Added working PDF download link (images/Bonds__Rondasha.pdf)
-✔ Cleaned and organized HTML formatting
-✔ Added GitHub repository links to Projects section
-✔ Ensured GitHub Pages–compatible paths
-✔ Tested layout, links, and resume visibility
-============================================================
--->
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -25,255 +8,198 @@ Student: Rondasha “Gabby” Bonds
 </head>
 
 <body>
-  <header class="site-header">
-    <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#sketches">Sketches</a>
-      <a href="#resume">Resume</a>
-      <a href="#contact">Contact</a>
-    </nav>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav-container">
+      <div class="logo">Gabby Bonds</div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#sketches">Sketches</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-
-    <!-- ABOUT -->
-    <section id="about" class="section about">
-      <div class="container">
-        <h1>Hi, I’m Gabby 👋</h1>
-        <p>CSCE student focused on cloud, automation, and thoughtful product UX.</p>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <h1 class="hero-title">Hi, I’m Gabby 👋</h1>
+        <p class="hero-sub">CSCE student focused on cloud engineering, automation, and thoughtful UX.</p>
+        <a href="#projects" class="btn hero-btn">View My Work</a>
       </div>
-    </section>
+      <div class="hero-img"></div>
+    </div>
+  </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section skills">
-      <div class="container">
-        <h2>Skills</h2>
-        <ul class="skill-list">
-          <li>AWS (EC2, S3, IAM)</li>
-          <li>Bash & PowerShell automation</li>
-          <li>HTML • CSS • JavaScript</li>
-          <li>Networking fundamentals</li>
-        </ul>
-      </div>
-    </section>
+  <!-- ABOUT -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I’m a Computer Science & Engineering student passionate about building clean, well-designed
+        applications — from cloud automation to responsive websites and mental-wellness tools that
+        support my community.
+      </p>
+    </div>
+  </section>
 
-    <!-- PROJECTS (UPDATED FOR FINAL ASSIGNMENT) -->
-    <section id="projects" class="section projects">
-      <div class="container">
-        <h2>Projects</h2>
-        <p>Below are code samples I uploaded to my GitHub repositories.</p>
+  <!-- SKILLS -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <h2>Skills</h2>
 
-        <article class="card">
+      <ul class="skills-grid">
+        <li>AWS (EC2, S3, IAM)</li>
+        <li>Bash & PowerShell Automation</li>
+        <li>HTML, CSS, JavaScript</li>
+        <li>C++, Java, Python</li>
+        <li>Networking Fundamentals</li>
+        <li>React & Node (Project Experience)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section project-section">
+    <div class="container">
+      <h2>Projects</h2>
+
+      <div class="project-grid">
+
+        <article class="project-card">
           <h3>OVO Fans React Website</h3>
-          <p>A React + Node full-stack application with dynamic components and styling.</p>
+          <p>A full React + Node project with routing, dynamic album components, and custom styling.</p>
           <a href="https://github.com/rondashabonds/ovofans" class="btn" target="_blank">View Repository</a>
         </article>
 
-        <article class="card">
-          <h3>Class Code Samples</h3>
-          <p>Collection of Java, Python, Linux, and C++ programming assignments.</p>
-          <a href="https://github.com/rondashabonds/linux-security-automation" class="btn" target="_blank">View Repository</a>
-        </article>
-
-        <article class="card">
+        <article class="project-card">
           <h3>CloudPulse Monitor</h3>
-          <p>Cloud monitoring + security tool built with dashboard analytics.</p>
+          <p>Cloud monitoring + security tool featuring dashboards and automated log analysis.</p>
           <a href="https://github.com/rondashabonds/cloudpulse-monitor" class="btn" target="_blank">View Repository</a>
         </article>
 
+        <article class="project-card">
+          <h3>Linux + C++ Code Samples</h3>
+          <p>Collection of assignments demonstrating system-level coding and algorithmic work.</p>
+          <a href="https://github.com/rondashabonds/linux-security-automation" class="btn" target="_blank">View Repository</a>
+        </article>
 
       </div>
-    </section>
 
-    <!-- SKETCHES -->
-    <section id="sketches" class="section sketches">
-      <div class="container">
-        <h2>Product Sketches</h2>
+    </div>
+  </section>
 
-        <figure style="max-width: 900px; margin: 1rem auto;">
-          <img src="images/sketch-1.png"
-            alt="Sketch preview"
-            style="width:100%; height:auto; display:block; border:1px solid #e0e0e0; border-radius:12px;" />
-          <figcaption style="text-align:center; margin-top:.5rem; font-size:.95rem;">
-            Preview of one sketch. See all three in the PDF.
-          </figcaption>
-        </figure>
+  <!-- SKETCHES -->
+  <section id="sketches" class="section sketch-section">
+    <div class="container">
+      <h2>Product Sketches</h2>
+      <p>Early-stage designs for the Campus Mental-Wellness Navigator project.</p>
 
-        <p style="text-align:center; margin-top:1rem;">
-          <a href="images/sketches.pdf" target="_blank" rel="noopener">
-            Download all sketches (PDF)
-          </a>
+      <img src="images/Wireframe UI Sketches for Intake Flow.png" alt="Sketch preview" class="sketch-img"/>
+
+      <a href="images/sketches_all.pdf" class="btn" target="_blank">Download All Sketches (PDF)</a>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume" class="section resume-section">
+    <div class="container">
+      <h2>Resume</h2>
+      <p>Download my full resume or explore the HTML version below.</p>
+
+      <a class="btn" href="images/Bonds__Rondasha.pdf" target="_blank">Download PDF Resume</a>
+
+      <div class="resume-box">
+
+        <h3>Rondasha “Gabby” Bonds</h3>
+        <p>
+          Engineering & Computing Student<br>
+          <strong>Email:</strong> rondashabonds@gmail.com • 
+          <a href="https://github.com/rondashabonds" target="_blank">GitHub</a>
         </p>
-      </div>
-    </section>
 
-    <!-- RESUME SECTION -->
-    <section id="resume" class="section resume">
-      <div class="container">
-        <h2>Resume</h2>
+        <hr>
 
-        <p>You can view the HTML version of my resume below, or download the PDF version.</p>
-
-        <p style="margin-top:1rem;">
-          <a href="images/Bonds__Rondasha.pdf" class="btn" target="_blank">Download Resume (PDF)</a>
-        </p>
-
-        <div class="resume-box"
-          style="max-width:800px;margin:2rem auto;padding:1.5rem;border:1px solid #ddd;border-radius:12px;background:#fafafa;">
-
-          <h2 style="margin-top:0;">Rondasha “Gabby” Bonds</h2>
-          <p>
-            Engineering & Computing Student<br>
-            <strong>Cell:</strong> 843-263-8610 |
-            <strong>Email:</strong> rondashabonds@gmail.com |
-            <a href="https://github.com/rondashabonds" target="_blank">GitHub</a>
-          </p>
-
-          <hr>
-
-          <h3>Education</h3>
-          <ul>
-            <li>
-              <strong>University of South Carolina — Columbia, SC</strong><br>
-              Bachelor of Science in Computer Information Systems (Aug 2023 – May 2026)<br>
-              Cumulative GPA: 3.0
-            </li>
-
-            <li>
-              <strong>Technical College of the Lowcountry — Beaufort, SC</strong><br>
-              Associate of Arts (May 2023)<br>
-              Certificates: General Education • Math & English Core • Liberal Arts
-            </li>
-
-            <li>
-              <strong>Whale Branch Early College — Beaufort, SC</strong><br>
-              High School Diploma (June 2023)<br>
-              Cumulative GPA: 4.4 • Top 10 Graduate • Honor Roll
-            </li>
-          </ul>
-
-          <hr>
-
-          <h3>Technical Skills</h3>
-          <ul>
-            <li><strong>Programming Languages:</strong> Java, Python, HTML, JavaScript, C++</li>
-            <li><strong>AWS:</strong> EC2, S3, Route 53, CloudFormation, CloudWatch, Lambda, API Gateway</li>
-            <li><strong>Operating Systems:</strong> Windows XP Pro, Linux, Amazon Linux, PuTTY</li>
-            <li><strong>Tools:</strong> Amazon QuickSight, Eclipse, Microsoft Office (Excel, Word, Access, PowerPoint)</li>
-            <li><strong>Networking:</strong> TCP/IP, DNS, routing, subnetting, troubleshooting, IT Field Services</li>
-          </ul>
-
-          <hr>
-
-          <h3>Experience</h3>
-
-          <h4>System Administrator & Cloud Intern — University of South Carolina (May 2025 – Present)</h4>
-          <ul>
-            <li>Supported deployment & maintenance of AWS infrastructure (EC2, S3, IAM) managing 20+ instances and 50+ buckets.</li>
-            <li>Automated 10+ routine tasks using Bash & PowerShell, reducing workload by ~30%.</li>
-          </ul>
-
-          <h4>Enterprise Data Networks — Student Team Member (Mar 2025 – Jun 2025)</h4>
-          <ul>
-            <li>Maintained campus network, telephone, and wiring systems across 40+ buildings.</li>
-            <li>Assisted with tracking 1,200+ devices and fieldwork across 15+ sites.</li>
-            <li>Collaborated with 5 IT teams to improve documentation & workflow.</li>
-          </ul>
-
-          <hr>
-
-          <h3>Extracurricular Activities</h3>
-
-          <h4>Founder & President — The You Matter Project (Aug 2025 – Present)</h4>
-          <ul>
-            <li>Founded a nonprofit promoting mental health awareness for 500+ students.</li>
-            <li>Partnered with schools & community groups reaching 1,000+ members.</li>
-          </ul>
-
-          <h4>Women in Computing — Member (Jan 2023 – Present)</h4>
-          <ul>
-            <li>Advocate for gender diversity through events, workshops, and mentoring.</li>
-          </ul>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- PROBLEM STATEMENT -->
-    <section id="problem-statement" class="section container">
-      <img src="images/png2pdf-1.png" alt="Problem statement illustration"
-        style="display:block;margin:30px auto;max-width:100%;height:auto;">
-
-      <h1>Problem Statement: Campus Mental-Wellness Navigator + Kit Requests</h1>
-
-      <p><strong>Background.</strong> Many UofSC students struggle to find the right mental-wellness resources quickly; kit requests are handled manually.</p>
-      <p><strong>Users.</strong> UofSC students (primary), mentors & volunteers (secondary).</p>
-      <p><strong>Problem.</strong> Students abandon searches; volunteers face duplicate questions and lose request visibility.</p>
-      <p><strong>Goal.</strong> Recommend the right resource in ≤ 60s and streamline kit requests with transparent status.</p>
-
-      <h2>Scope</h2>
-      <ul>
-        <li><em>In:</em> Intake flow, recommendations, kit request form, volunteer dashboard, email confirmations.</li>
-        <li><em>Out:</em> Medical advice, live chat, insurance billing, native apps.</li>
-      </ul>
-
-      <h2>Constraints & Assumptions</h2>
-      <ul>
-        <li>Static hosting (GitHub Pages), WCAG AA, mobile-first, minimal PII.</li>
-        <li>Resources managed through JSON updated weekly.</li>
-      </ul>
-
-      <h2>Success Metrics</h2>
-      <ul>
-        <li>≥80% users get a recommendation in ≤60s</li>
-        <li>≥50% fewer duplicate questions</li>
-        <li>≥90% kit requests updated within 24 hours</li>
-      </ul>
-
-      <details>
-        <summary>Risks & Mitigations</summary>
+        <h4>Education</h4>
         <ul>
-          <li>Risk: stale information → Fix: weekly JSON updates.</li>
-          <li>Risk: privacy → Fix: minimize required data.</li>
-          <li>Risk: load → Fix: static site + lightweight JavaScript.</li>
+          <li><strong>University of South Carolina</strong> — B.S. Computer Information Systems</li>
+          <li><strong>Technical College of the Lowcountry</strong> — Associate of Arts</li>
         </ul>
-      </details>
-    </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section contact">
-      <div class="container">
-        <h2>Contact</h2>
-
-        <form class="contact-form">
-          <label>
-            Name
-            <input type="text" name="name" placeholder="Your name" required>
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" placeholder="you@example.com" required>
-          </label>
-          <label>
-            Message
-            <textarea name="message" rows="5" placeholder="Say hello…" required></textarea>
-          </label>
-          <button type="submit" class="btn">Send</button>
-        </form>
+        <h4>Technical Skills</h4>
+        <ul>
+          <li>Java, Python, HTML, JavaScript, C++</li>
+          <li>AWS EC2, S3, Route 53, CloudFormation</li>
+          <li>Linux, Amazon Linux, PuTTY</li>
+          <li>Networking, troubleshooting, documentation</li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
+  <!-- PROBLEM STATEMENT -->
+  <section id="problem" class="section problem-section">
+    <div class="container">
+      <h2>Problem Statement</h2>
 
-  <footer class="site-footer">
+      <h3>Campus Mental-Wellness Navigator + Kit Requests</h3>
+
+      <img src="images/png2pdf-1.png" class="problem-img" alt="Problem statement illustration">
+
+      <p><strong>Background:</strong> Students struggle to find wellness resources quickly; kit requests lack tracking.</p>
+      <p><strong>Users:</strong> Students, mentors, volunteers.</p>
+      <p><strong>Goal:</strong> Provide fast resource recommendations & streamline kit request statuses.</p>
+
+      <h4>Scope</h4>
+      <ul>
+        <li>Intake flow, recommendations, kit request form, volunteer dashboard, email confirmations</li>
+      </ul>
+
+      <h4>Constraints</h4>
+      <ul>
+        <li>WCAG AA, mobile-first, static hosting</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2>Contact Me</h2>
+
+      <form class="contact-form">
+        <label>
+          Name
+          <input type="text" required>
+        </label>
+
+        <label>
+          Email
+          <input type="email" required>
+        </label>
+
+        <label>
+          Message
+          <textarea rows="5" required></textarea>
+        </label>
+
+        <button class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
     <p>© <span id="year"></span> Gabby Bonds</p>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
