@@ -1,68 +1,200 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Resume • Gabby Bonds</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta charset="utf-8" />
+  <title>Rondasha (Gabby) Bonds | Resume</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    body {
+      background: #f5f7fb;
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    .resume-container {
+      max-width: 900px;
+      margin: 4rem auto;
+      background: #ffffff;
+      padding: 3rem;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      border-radius: 12px;
+    }
+
+    .resume-header {
+      text-align: center;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .resume-header h1 {
+      margin: 0;
+      font-size: 2.6rem;
+      font-weight: 700;
+    }
+
+    .resume-header p {
+      margin: 0.35rem 0;
+      font-size: 1.05rem;
+      color: #555;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: .75rem 1.6rem;
+      background: #6ea8fe;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    .resume-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .resume-section h2 {
+      font-size: 1.5rem;
+      border-bottom: 2px solid #6ea8fe;
+      padding-bottom: .4rem;
+      margin-bottom: 1.2rem;
+      color: #111;
+    }
+
+    .resume-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .resume-item h3 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .resume-item span {
+      color: #666;
+      font-size: .95rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container nav-container">
-      <div class="logo">Gabby Bonds</div>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-      </nav>
-    </div>
-  </header>
+  <div class="resume-container">
 
-  <!-- RESUME CONTENT -->
-  <section class="section resume-section">
-    <div class="container resume-box">
-
-      <h2>Rondasha “Gabby” Bonds</h2>
+    <!-- HEADER -->
+    <div class="resume-header">
+      <h1>Rondasha “Gabby” Bonds</h1>
       <p>Engineering & Computing Student</p>
-
+      <p>📞 843-263-8610 | ✉️ rondashabonds@gmail.com</p>
       <p>
-        <strong>Email:</strong> rondashabonds@gmail.com • 
-        <a href="https://github.com/rondashabonds" target="_blank">GitHub</a>
+        <a href="https://github.com/rondashabonds" target="_blank">
+          github.com/rondashabonds
+        </a>
       </p>
 
-      <hr>
-
-      <h3>Education</h3>
-      <ul>
-        <li><strong>University of South Carolina</strong> — B.S. Computer Information Systems</li>
-        <li><strong>Technical College of the Lowcountry</strong> — Associate of Arts</li>
-      </ul>
-
-      <h3>Technical Skills</h3>
-      <ul>
-        <li>Java, Python, HTML, JavaScript, C++</li>
-        <li>AWS EC2, S3, Route 53, CloudFormation</li>
-        <li>Linux, Amazon Linux, PuTTY</li>
-        <li>Networking, troubleshooting, documentation</li>
-      </ul>
-
-      <h3>Experience</h3>
-      <p>Available upon request. (Or add experience here if required.)</p>
-
-      <hr>
-
-      <a href="images/Bonds__Rondasha.pdf" class="btn" target="_blank">Download Full PDF Resume</a>
-
+      <a href="images/resume.pdf" target="_blank" class="download-btn">
+        Download Official Resume PDF
+      </a>
     </div>
-  </section>
 
-  <footer class="footer">
-    <p>© <span id="year"></span> Gabby Bonds</p>
-  </footer>
+    <!-- EDUCATION -->
+    <section class="resume-section">
+      <h2>Education</h2>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+      <div class="resume-item">
+        <h3>University of South Carolina — Columbia, SC</h3>
+        <span>August 2023 – May 2026</span>
+        <ul>
+          <li>Bachelor of Science in Computer Information Systems</li>
+          <li>Cumulative GPA: 3.0</li>
+        </ul>
+      </div>
+
+      <div class="resume-item">
+        <h3>Technical College of the Lowcountry — Beaufort, SC</h3>
+        <span>May 2023</span>
+        <ul>
+          <li>Associate of Arts</li>
+          <li>Certificates: General Education, Math & English Core, Liberal Arts</li>
+        </ul>
+      </div>
+
+      <div class="resume-item">
+        <h3>Whale Branch Early College — Beaufort, SC</h3>
+        <span>June 2023</span>
+        <ul>
+          <li>High School Diploma</li>
+          <li>GPA: 4.4 | Top 10 Graduate | Honor Roll</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section class="resume-section">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><strong>Programming:</strong> Java, Python, HTML, JavaScript, C++</li>
+        <li><strong>AWS:</strong> EC2, S3, Route 53, CloudFormation, CloudWatch, Lambda, API Gateway</li>
+        <li><strong>Operating Systems:</strong> Windows XP Professional, Linux, Amazon Linux, PuTTY</li>
+        <li><strong>Tools:</strong> Amazon QuickSight, Eclipse, Microsoft Suite (Excel, Word, Access, PowerPoint)</li>
+        <li><strong>Networking:</strong> TCP/IP, DNS, routing, subnetting, traceroute, cURL</li>
+        <li><strong>IT:</strong> System Configuration, Field Services, Documentation, Troubleshooting</li>
+      </ul>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="resume-section">
+      <h2>Experience</h2>
+
+      <div class="resume-item">
+        <h3>System Administrator & Cloud Intern — University of South Carolina</h3>
+        <span>May 2025 – Present</span>
+        <ul>
+          <li>Deployed and maintained AWS infrastructure (EC2, S3, IAM) supporting 20+ instances and 50+ S3 buckets for 1,000+ users</li>
+          <li>Automated 10+ administrative tasks using Bash and PowerShell, reducing manual workload by ~30%</li>
+        </ul>
+      </div>
+
+      <div class="resume-item">
+        <h3>Enterprise Data Networks — Student Team Member</h3>
+        <span>March 2025 – June 2025</span>
+        <ul>
+          <li>Supported networking systems across 40+ campus buildings for 25,000+ users</li>
+          <li>Tracked 1,200+ devices and collaborated with 5 IT service teams</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EXTRACURRICULAR -->
+    <section class="resume-section">
+      <h2>Extracurricular Activities</h2>
+
+      <div class="resume-item">
+        <h3>Founder & President — The You Matter Project</h3>
+        <span>August 2025 – Present</span>
+        <ul>
+          <li>Founded a mental health nonprofit reaching 500+ students</li>
+          <li>Partnered with 3+ schools to expand outreach to 1,000+ community members</li>
+        </ul>
+      </div>
+
+      <div class="resume-item">
+        <h3>Women In Computing — Club Member</h3>
+        <span>January 2023 – Present</span>
+        <ul>
+          <li>Advocate for gender diversity in technology through events and mentoring</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
 </body>
 </html>
